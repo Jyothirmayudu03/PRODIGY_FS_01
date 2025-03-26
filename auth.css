@@ -1,0 +1,100 @@
+:root {
+    --primary-color: #4CAF50;
+    --secondary-color: #2E7D32;
+    --accent-color: #81C784;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.auth-container {
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+}
+
+.auth-visual {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+
+.auth-form {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4;
+    padding: 2rem;
+}
+
+.login-card, .register-card {
+    width: 100%;
+    max-width: 400px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    padding: 2rem;
+}
+
+.btn-orchard {
+    background-color: var(--primary-color);
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.btn-orchard:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+.auth-divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.auth-divider::before, 
+.auth-divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.auth-divider span {
+    padding: 0 10px;
+    color: #888;
+}
+
+.password-strength {
+    height: 4px;
+    background-color: #e0e0e0;
+    margin-top: 5px;
+    position: relative;
+}
+
+.password-strength-meter {
+    height: 100%;
+    width: 0;
+    background-color: #ff0000;
+    transition: width 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .auth-container {
+        flex-direction: column;
+    }
+    .auth-visual, .auth-form {
+        flex: none;
+    }
+}
